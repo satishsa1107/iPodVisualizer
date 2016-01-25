@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EffectsViewController">
+            <connections>
+                <outlet property="cameraView" destination="YYz-9w-DLA" id="KGS-kM-5Ga"/>
+                <outlet property="navBarView" destination="REw-QD-8iE" id="svn-G2-JG1"/>
+                <outlet property="pickerView" destination="Kbw-ml-6f7" id="LJ9-m8-fhA"/>
+                <outlet property="sliderView" destination="xIR-d1-QdP" id="VXr-ds-S9Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REw-QD-8iE">
+                    <rect key="frame" x="0.0" y="0.0" width="570" height="44"/>
+                    <animations/>
+                    <items>
+                        <navigationItem title="Psilo Effects" id="5Uf-4g-KjJ">
+                            <barButtonItem key="leftBarButtonItem" systemItem="done" id="eGX-Fu-nlO">
+                                <connections>
+                                    <action selector="returnToMainViewController:" destination="-1" id="d2M-6z-51u"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Reset" id="YN8-02-OLq">
+                                <connections>
+                                    <action selector="resetValues:" destination="-1" id="QFq-9u-a8g"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="bQy-7U-8mE"/>
+                    </connections>
+                </navigationBar>
+                <pickerView alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbw-ml-6f7">
+                    <rect key="frame" x="8" y="49" width="156" height="141"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kTy-CP-0sh"/>
+                        <outlet property="delegate" destination="-1" id="nj9-2y-6gT"/>
+                    </connections>
+                </pickerView>
+                <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYz-9w-DLA" userLabel="CameraView">
+                    <rect key="frame" x="201" y="44" width="343" height="193"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <slider opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xIR-d1-QdP">
+                    <rect key="frame" x="11" y="207" width="151" height="31"/>
+                    <animations/>
+                    <connections>
+                        <action selector="UpdateSliderValue:" destination="-1" eventType="valueChanged" id="fPJ-0s-S5H"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="297" y="250"/>
+        </view>
+    </objects>
+</document>
